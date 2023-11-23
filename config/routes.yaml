@@ -1,3 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+google_login:
+  path: /google-login
+  controller: App\Controller\GoogleAuthController::googleLogin

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page_title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="display-4">{{ nasaPhoto.title }}</h1>
+
+                <p>{{ nasaPhoto.explanation }}</p>
+
+                <p><strong>Date:</strong> {{ nasaPhoto.date|date('d-m-Y') }}</p>
+
+                <img src="{{ nasaPhoto.url }}" alt="{{ nasaPhoto.title }}">
+            </div>
+        </div>
+    </div>
+{% endblock %}

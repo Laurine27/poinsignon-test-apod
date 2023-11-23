@@ -1,0 +1,2 @@
+page_title: NASA Photo of the Day
+no_data: Aucune donnée, veuillez lancer la commande "php bin/console app:fetch-nasa-photo-of-the-day"
