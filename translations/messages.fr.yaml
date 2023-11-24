@@ -1,5 +1,5 @@
 page_title: NASA Photo du jour
-no_data: Aucune donnée, veuillez lancer la commande "php bin/console app:fetch-nasa-photo-of-the-day"
+no_data: Aucune donnée, veuillez lancer la commande "php bin/console nasa:import-daily-photo"
 connected_user: Vous êtes connecté en tant que
 google_connexion: Connexion avec Google
 photo_date: "Date:"

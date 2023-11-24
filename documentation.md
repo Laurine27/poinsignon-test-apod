@@ -6,6 +6,23 @@
 
     composer install
 
+### Copier le .env en .env.local
+
+    cp .env .env.local
+
+Remplacer les données suivantes :  
+
+DATABASE_URL     
+NASA_API_KEY (clé d'api reçu par mail en s'inscrivant au site de la nasa)
+
+L'application n'est pas validée par Google, pour tester la connexion Google, il vous faudra ajouter votre Google Id et votre Google Secret.    
+GOOGLE_CLIENT_ID (identifiant récupérable depuis son compte google)    
+GOOGLE_CLIENT_SECRET (identifiant récupérable depuis son compte google)
+
+### Créer la base de données
+
+    php bin/console doctrine:database:create
+
 ### Ajout des données en base de données
 
     php bin/console d:s:u --force

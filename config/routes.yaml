@@ -3,5 +3,5 @@ connect_google:
   controller: App\Controller\GoogleAuthController::connectAction
 
 login:
-  path: /login
+  path: /
   controller: App\Controller\SecurityController::login
