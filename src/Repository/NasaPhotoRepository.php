@@ -23,8 +23,6 @@ class NasaPhotoRepository extends ServiceEntityRepository
         parent::__construct($registry, NasaPhoto::class);
     }
 
-    // Dommage car j'aurai pu utiliser la méthode magique findByDate mais problème à cause du format
-
     /**
      * @throws NonUniqueResultException
      */

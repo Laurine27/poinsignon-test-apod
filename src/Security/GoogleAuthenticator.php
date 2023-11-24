@@ -50,6 +50,7 @@ class GoogleAuthenticator extends OAuth2Authenticator
                     $existingUser->setEmail($email);
                     $existingUser->setRoles(['ROLE_GOOGLE']);
                     $existingUser->setGoogleId($googleUser->getId());
+                    $existingUser->setAvatar($googleUser->getAvatar());
                     $this->entityManager->persist($existingUser);
                 }
                 $this->entityManager->flush();

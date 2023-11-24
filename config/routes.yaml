@@ -1,3 +1,7 @@
-google_login:
-  path: /google-login
-  controller: App\Controller\GoogleAuthController::googleLogin
+connect_google:
+  path: /google-connect
+  controller: App\Controller\GoogleAuthController::connectAction
+
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login

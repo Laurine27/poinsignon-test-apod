@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -22,6 +23,9 @@ class User implements UserInterface
 
     #[ORM\Column(length: 255)]
     private ?string $googleId = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $avatar = null;
 
     public function getId(): ?int
     {
@@ -86,6 +90,18 @@ class User implements UserInterface
     public function setGoogleId(string $googleId): static
     {
         $this->googleId = $googleId;
+
+        return $this;
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar;
+    }
+
+    public function setAvatar(?string $avatar): static
+    {
+        $this->avatar = $avatar;
 
         return $this;
     }

@@ -6,13 +6,35 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 offset-md-2">
+                {% if app.user %}
+                    <div class="d-flex">
+                        <div class="text-right mt-2 mr-2 ml-auto"> {# Ajout de ml-auto ici #}
+                            <p class="text-muted">
+                                {{ 'connected_user'|trans }} {{ app.user.email }}.
+                                {% if app.user.avatar %}
+                                    <img src="{{ app.user.avatar }}" alt="{{ app.user.email }}" class="rounded-circle"
+                                         style="width: 30px;">
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div>
+                            {% if app.user %}
+                                <a href="{{ path('logout') }}"
+                                   class="btn btn-outline-secondary">{{ 'logout'|trans }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+
                 <h1 class="display-4">{{ nasaPhoto.title }}</h1>
 
                 <p>{{ nasaPhoto.explanation }}</p>
 
-                <p><strong>Date:</strong> {{ nasaPhoto.date|date('d-m-Y') }}</p>
+                <p><strong>{{ 'photo_date'|trans }}</strong> {{ nasaPhoto.date|date('d-m-Y') }}</p>
 
-                <img src="{{ nasaPhoto.url }}" alt="{{ nasaPhoto.title }}">
+                <div class="main-content">
+                    <img src="{{ nasaPhoto.url }}" alt="{{ nasaPhoto.title }}" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>

@@ -6,7 +6,6 @@ use App\Entity\NasaPhoto;
 use App\Exception\PhotoAlreadyExistException;
 use App\Repository\NasaPhotoRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Google\Service\AdMob\Date;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -70,7 +69,7 @@ class NasaApiService
     {
         $existingPhoto = $this->nasaPhotoRepository->findByDate($date);
 
-        if (!$existingPhoto?->isPhoto() && !$allowVideo) {
+        if (!$allowVideo && !$existingPhoto?->isPhoto()) {
             return false;
         }
 
