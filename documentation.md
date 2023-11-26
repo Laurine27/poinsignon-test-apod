@@ -9,9 +9,9 @@ Les versions symfony et php ont été augmentées pour pouvoir utiliser les dern
 L'API de la Nasa est récupérée à l'aide de Http Client de Symfony.
 
 Les librairies suivantes ont été utilisées pour gérer l'authentification Google :    
-"knpuniversity/oauth2-client-bundle": "*"     
-"league/oauth2-client": "^2.6"     
-"league/oauth2-google": "*"     
+"knpuniversity/oauth2-client-bundle"  
+"league/oauth2-client"
+"league/oauth2-google"     
 
 Un fichier de traduction a été mis en place avec symfony/translation.
 
@@ -44,7 +44,7 @@ http://localhost/connect/google/check
 
     php bin/console doctrine:database:create
 
-### Ajout des données en base de données
+### Ajout de la structure de la base de données
 
     php bin/console d:s:u --force
 
