@@ -61,3 +61,6 @@ Chaque jour, la commande suivante est lancée manuellement :
 Cette commande récupère la photo du jour depuis l'API de la NASA ainsi que celle de la veille, si elles n'existent pas déjà et les enregistre en base de données.    
 Si la photo du jour est une vidéo, la photo de la veille est affichée.
 
+## Image du projet 
+
+![Image du projet](apod.png)
